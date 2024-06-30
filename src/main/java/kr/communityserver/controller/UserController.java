@@ -29,9 +29,11 @@ public class UserController {
     private final JWTProvider jwtProvider;
 
 
-    @PostMapping("/user/login")
-    public ResponseEntity login(@RequestBody UserDTO userDTO){
-
+    @GetMapping("/user/login")
+    public ResponseEntity login(){
+  UserDTO userDTO = new UserDTO();
+        userDTO.setUid("test1");
+        userDTO.setPass("a1234!");
         log.info("login...1 : " + userDTO);
 
         try {

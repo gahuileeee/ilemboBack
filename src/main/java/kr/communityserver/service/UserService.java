@@ -37,6 +37,8 @@ public class UserService {
     private final JavaMailSender javaMailSender;
 
     public User register(UserDTO userDTO) {
+        log.info(userDTO.toString());
+        log.info("확인해봐!");
         String encoded = passwordEncoder.encode(userDTO.getPass());
         userDTO.setPass(encoded);
 

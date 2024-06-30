@@ -1,5 +1,6 @@
 package kr.communityserver.security.filter;
 
+import com.sun.tools.jconsole.JConsoleContext;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -26,7 +27,8 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-
+        log.info(request);
+        log.info(response);
         // 요청 주소에서 마지막 문자열 추출
         String uri = request.getRequestURI();
         int i = uri.lastIndexOf("/");

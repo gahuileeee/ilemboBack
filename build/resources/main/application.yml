@@ -25,9 +25,9 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    password: Abcd1234!
-    url: jdbc:mysql://15.165.171.40/community
-    username: myuser
+    password: 1234
+    url: jdbc:mysql://127.0.0.1/community
+    username: root
 
   devtools:
     livereload:
